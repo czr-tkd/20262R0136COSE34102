@@ -37,3 +37,14 @@ These developments improved CPU utilization, resource sharing, and interactive c
 - **Context Switching:** Changes which process runs on the CPU by saving and restoring process execution state.
 
 Context switching generally has higher overhead than mode switching because it involves changing process state and potentially address-space information.
+
+### 5. Process Management
+
+- **Program vs. Process:** A program is a collection of instructions stored as an executable file, while a process is a program currently in execution.
+- **Program Execution:** Source code is compiled into object files, linked into an executable, and loaded into memory for execution.
+- **Process Address Space:** A process contains memory regions such as the text segment, data segment, heap, and stack.
+- **Memory Protection:** Each process operates within its own protected address space, preventing unauthorized access to other processes' memory.
+- **Process Control Block (PCB):** The operating system maintains process information such as execution state, program counter, CPU registers, and resource-related information.
+- **Process States:** Processes transition between states such as ready, running, and waiting, depending on CPU availability and I/O operations.
+- **Context Switching:** The OS saves the current process's context and restores another process's context so execution can continue from its saved state.
+Processes provide a fundamental abstraction for resource management, execution, and memory protection in an operating system.
