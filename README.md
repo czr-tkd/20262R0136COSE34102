@@ -87,3 +87,29 @@ Interprocess Communication (IPC) enables processes to exchange data and cooperat
 
 **Synchronization:** Shared memory requires synchronization mechanisms, such as locks or semaphores, to prevent inconsistent results when processes access shared data concurrently.
 IPC is essential for process cooperation, modular system design, and efficient data exchange.
+
+### 8. Threads and Parallelism
+
+- **Thread:** A single flow of execution within a process.
+- **Multithreading:** Multiple threads execute within one process while sharing resources such as code, data, heap, and opened files.
+- **Thread-Specific Resources:** Each thread maintains its own program counter, CPU registers, and stack.
+- **Thread Context Switching:** Switching between threads in the same process is generally cheaper than switching between processes because the address space remains unchanged.
+
+**Thread Management Models:**
+- **User-Level Threads:** Managed by a user-space library without direct kernel awareness.
+- **Kernel-Level Threads:** Managed and scheduled individually by the operating system.
+- **Thread Pool:** Pre-creates reusable threads to reduce repeated thread creation overhead.
+
+**Concurrency vs. Parallelism:**
+- Concurrency allows multiple tasks to make progress through interleaved execution.
+- Parallelism allows multiple tasks to execute simultaneously on different CPU cores.
+
+**Parallelism Types:**
+- Data Parallelism: Different subsets of data are processed using the same operations.
+- Task Parallelism: Different computations execute concurrently.
+
+**POSIX Thread APIs:**
+- `pthread_create()` creates a new thread.
+- `pthread_join()` waits for a specified thread to terminate.
+
+Multithreading improves responsiveness, resource sharing, and parallel execution efficiency.
