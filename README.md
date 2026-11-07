@@ -24,3 +24,16 @@ These developments improved CPU utilization, resource sharing, and interactive c
 - **Monolithic Kernel:** Kernel services operate in a shared kernel environment, reducing communication overhead but increasing dependencies.
 - **Microkernel:** Services are separated into independent components, improving isolation and maintainability but introducing IPC overhead.
 - **Virtualization:** Hypervisors enable multiple guest operating systems to share the hardware resources of a host machine.
+
+### 4. Computer System and Event Handling
+
+- **Computer System Components:** A computer system consists of processors, memory, and I/O devices connected through communication buses.
+- **Bus Architecture:** Hierarchical buses help reduce bottlenecks caused by differences in device speeds.
+- **Instruction Execution:** The CPU repeatedly performs the fetch, decode, and execute cycle. The Program Counter (PC) identifies the next instruction to execute.
+- **Trap:** A synchronous event caused by the currently executing instruction, such as a system call or division-by-zero exception.
+- **Interrupt:** An asynchronous event triggered by external hardware, such as an I/O device or timer.
+- **Event Handling:** The OS saves relevant execution state, transfers control to an appropriate kernel handler, and subsequently resumes execution or schedules another process.
+- **Mode Switching:** Changes the CPU execution mode between user mode and kernel mode.
+- **Context Switching:** Changes which process runs on the CPU by saving and restoring process execution state.
+
+Context switching generally has higher overhead than mode switching because it involves changing process state and potentially address-space information.
