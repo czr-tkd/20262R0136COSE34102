@@ -7,5 +7,9 @@ An operating system manages hardware resources and provides services to applicat
 
 ### 2. OS History and Core Concepts
 
-Early operating systems used batch processing to execute jobs sequentially. Multiprogramming improved CPU utilization by switching between programs during I/O operations. Time-sharing introduced time slices to support fair CPU allocation among multiple processes.
-
+- **Batch Processing:** Early operating systems executed jobs sequentially without user interaction during execution.
+- **Spooling:** I/O requests can be buffered, allowing computation and I/O operations to overlap and improving system efficiency.
+- **Multiprogramming:** Multiple programs are loaded into memory simultaneously. When one process waits for I/O, the CPU can execute another process to reduce idle time.
+- **Time-Sharing:** CPU time is divided into time slices (time quanta). Processes take turns using the CPU, improving fairness and responsiveness.
+- **Context Switching:** The operating system saves the execution state of the current process and restores another process's state to switch CPU execution.
+These developments improved CPU utilization, resource sharing, and interactive computing.
