@@ -48,3 +48,25 @@ Context switching generally has higher overhead than mode switching because it i
 - **Process States:** Processes transition between states such as ready, running, and waiting, depending on CPU availability and I/O operations.
 - **Context Switching:** The OS saves the current process's context and restores another process's context so execution can continue from its saved state.
 Processes provide a fundamental abstraction for resource management, execution, and memory protection in an operating system.
+
+### 6. CPU Scheduling
+
+- **CPU Scheduling:** The operating system selects which ready process should execute on the CPU.
+- **CPU and I/O Bursts:** Processes alternate between CPU computation and I/O waiting periods. CPU-intensive and I/O-intensive processes have different execution characteristics.
+- **Preemptive Scheduling:** The OS can interrupt a running process and allocate the CPU to another process.
+- **Non-Preemptive Scheduling:** A process retains the CPU until it blocks or terminates.
+
+**Major Scheduling Algorithms:**
+- **First-Come, First-Served (FCFS):** Executes processes in arrival order.
+- **Shortest-Job-First (SJF):** Selects the process with the shortest CPU burst.
+- **Priority Scheduling:** Allocates CPU time according to process priority.
+- **Round Robin (RR):** Assigns each process a fixed time quantum.
+- **Multilevel Queue / Feedback Queue:** Organizes processes into multiple scheduling queues.
+
+**Scheduling Evaluation Criteria:**
+- CPU Utilization: Percentage of time the CPU is actively used.
+- Throughput: Number of processes completed per unit of time.
+- Turnaround Time: Total time from arrival to completion.
+- Waiting Time: Time spent waiting in the ready queue.
+- Response Time: Time from arrival to the first CPU execution.
+Different scheduling algorithms balance fairness, responsiveness, and system performance.
