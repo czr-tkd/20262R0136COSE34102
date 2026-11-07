@@ -70,3 +70,20 @@ Processes provide a fundamental abstraction for resource management, execution, 
 - Waiting Time: Time spent waiting in the ready queue.
 - Response Time: Time from arrival to the first CPU execution.
 Different scheduling algorithms balance fairness, responsiveness, and system performance.
+
+### 7. Interprocess Communication (IPC)
+
+Interprocess Communication (IPC) enables processes to exchange data and cooperate while maintaining memory protection.
+
+**Two Main IPC Models:**
+- **Shared Memory:** Multiple processes access a shared memory region established by the kernel. Communication is efficient, but processes must coordinate concurrent access to avoid data inconsistency.
+- **Message Passing:** Processes exchange messages through kernel-supported send and receive operations without directly sharing memory.
+
+**Common IPC Mechanisms:**
+- **Signals:** Notify processes about predefined events, such as SIGINT and SIGKILL.
+- **Pipes:** Provide ordered, one-directional data communication between processes.
+- **Message Queues:** Store messages in kernel-managed queues for asynchronous communication.
+- **Sockets:** Enable communication between processes on the same or different machines, using protocols such as TCP or UDP.
+
+**Synchronization:** Shared memory requires synchronization mechanisms, such as locks or semaphores, to prevent inconsistent results when processes access shared data concurrently.
+IPC is essential for process cooperation, modular system design, and efficient data exchange.
