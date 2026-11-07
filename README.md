@@ -113,3 +113,34 @@ IPC is essential for process cooperation, modular system design, and efficient d
 - `pthread_join()` waits for a specified thread to terminate.
 
 Multithreading improves responsiveness, resource sharing, and parallel execution efficiency.
+
+### 9. Virtual Memory and Paging
+
+- **Virtual Memory:** Provides each process with its own logical address space, supporting memory isolation, transparency, and efficient physical memory utilization.
+- **Address Translation:** Converts virtual addresses into physical addresses using hardware support such as the Memory Management Unit (MMU).
+- **Contiguous Allocation:** Allocates a continuous physical memory region to a process using base and bound registers.
+- **Allocation Strategies:** First-fit, best-fit, and worst-fit determine where available memory is assigned.
+- **Segmentation:** Divides a process into logical regions, such as code, heap, and stack, which can be placed separately in physical memory.
+
+**Paging:**
+- Virtual memory is divided into fixed-size pages.
+- Physical memory is divided into equally sized frames.
+- A page table maps Virtual Page Numbers (VPNs) to Physical Frame Numbers (PFNs).
+- Each process maintains its own page table.
+- Page Table Entries (PTEs) contain frame mappings and protection/status flags.
+
+**Translation Lookaside Buffer (TLB):**
+- Caches recently used page-to-frame mappings.
+- Reduces page table lookup overhead and improves memory access performance.
+
+**Page Table Designs:**
+- Multilevel page tables reduce memory overhead through hierarchical structures.
+- Inverted page tables maintain mappings from the perspective of physical frames.
+
+**Memory Fragmentation:**
+- External Fragmentation: Free memory exists but is divided into non-contiguous regions.
+- Internal Fragmentation: Unused space remains inside allocated memory units.
+
+Paging avoids external fragmentation but may still introduce internal fragmentation.
+
+
